@@ -61,6 +61,11 @@ Under Table
 SELECT Sheet1(Tableau Table 1) > Drag 3 menu(total cases,total deaths, total percentage in column)>Select from show me grapg(right top)
 move measure names on top of column,you can expand the table, then you cna change font, color )
 ****(NOTE:if you want to change the number 2 Death percentage (Measure value :Format Menu value:field>sum(death percentage) Number(custom) ****
-SELECT Sheet1(Tableau Table 1) >Drag 1 menu on column(location) and Rows(sum(total death)). You can manually sort the death count.
+SELECT Sheet2(Tableau Table 2) >Drag 1 menu on column(location) and Rows(sum(total death)). You can manually sort the death count.
+SELECT Sheet3(Tableau Table 3)>location dropdown menu geography >then you can see latitude and longitude 
+longitude in column, latitude in row
+SELECT Sheet4(Tableau Table 4) column year(date),row(sum(percent population))>column year(date: month)
+
+Go to Dashboard>change sixe automatic
 
 
