@@ -35,4 +35,25 @@ order by TotalDeathCount desc
 CTRL+SHIFT+C(IT will copy with the header, then save in Excel and save as TableuTable2.xlsx)
 
 **C.**
+REPEAT LIKE A AND B
+Select Location, Population, MAX(total_cases) as HighestInfectionCount,  Max((total_cases/population))*100 as PercentPopulationInfected
+From PortfolioProject..CovidDeaths$
+--Where location like '%states%'
+Group by Location, Population
+order by PercentPopulationInfected desc
+**(NOTE:if there is null replace ALL to 0)**
+
+**D.**
+REPEAT LIKE A,B AND C
+Select Location, Population,date, MAX(total_cases) as HighestInfectionCount,  Max((total_cases/population))*100 as PercentPopulationInfected
+From PortfolioProject..CovidDeaths$
+--Where location like '%states%'
+Group by Location, Population, date
+order by PercentPopulationInfected desc
+**(NOTE:if there is null replace ALL to 0 AND CHANGE DATE TO SHORT DATE(HOME MENU) )**
+
+We have 4 Excel data , now we can visualize into Tableau.
+GO to Tableau>Microsoft excel>TableauTable1.xlsx>sheet1(Go to worksheet)>go to sheet 2 (click +sign below)>click new data Source>microsoft excel>TableauTable2.xlsx>
+go to sheet 3(click +sign below)>click new data Source>microsoft excel>TableauTable3.xlsx>
+go to sheet 4 (click +sign below)>click new data Source>microsoft excel>TableauTable4.xlsx
 
