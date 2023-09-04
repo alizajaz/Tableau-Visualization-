@@ -57,3 +57,10 @@ GO to Tableau>Microsoft excel>TableauTable1.xlsx>sheet1(Go to worksheet)>go to s
 go to sheet 3(click +sign below)>click new data Source>microsoft excel>TableauTable3.xlsx>
 go to sheet 4 (click +sign below)>click new data Source>microsoft excel>TableauTable4.xlsx
 
+Under Table 
+SELECT Sheet1(Tableau Table 1) > Drag 3 menu(total cases,total deaths, total percentage in column)>Select from show me grapg(right top)
+move measure names on top of column,you can expand the table, then you cna change font, color )
+****(NOTE:if you want to change the number 2 Death percentage (Measure value :Format Menu value:field>sum(death percentage) Number(custom) ****
+SELECT Sheet1(Tableau Table 1) >Drag 1 menu on column(location) and Rows(sum(total death)). You can manually sort the death count.
+
+
