@@ -8,7 +8,8 @@ STEPWISE PROCESS TO DOWNLOAD TABLEAU 2023
 
    TABLEAU CAN NOT DIRECTLY CONNECT TO THE DATABASE, WE HAVE TO USE EXCEL
    STEPWISE PROCESS:
-   1. RUN THIS
+    **A.**
+1. RUN THIS
        Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as int)) as total_deaths, SUM(cast(new_deaths as int))/SUM(New_Cases)*100 as DeathPercentage
         From PortfolioProject..CovidDeaths$
       --Where location like '%states%'
@@ -20,5 +21,18 @@ STEPWISE PROCESS TO DOWNLOAD TABLEAU 2023
 2. Go to excel
    Insert or paste the copied file from the upper query(RESULTS)
    save Excel file in TableauTable1.xlsx
-   
+
+   **B.**
+   RUN THIS
+Select location, SUM(cast(new_deaths as int)) as TotalDeathCount
+From PortfolioProject..CovidDeaths$
+--Where location like '%states%'
+Where continent is null 
+and location not in ('World', 'European Union', 'International')
+Group by location
+order by TotalDeathCount desc
+
+CTRL+SHIFT+C(IT will copy with the header, then save in Excel and save as TableuTable2.xlsx)
+
+**C.**
 
